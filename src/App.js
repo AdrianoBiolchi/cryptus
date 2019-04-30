@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header branding="Real-Time Cryptocurrency Dashboard" />
+        <Header branding="Cryptus - Real Time Cryptos" />
         <div className="container">
           <Body />
         </div>

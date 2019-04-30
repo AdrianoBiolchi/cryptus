@@ -12,7 +12,7 @@ ReactFC.fcRoot(FusionCharts, Charts, Widgets, FusionTheme);
 class Body extends React.Component{
     constructor(props){
         super(props);
-        this.BASE_URL = 'https://cors.io/?https://api.cryptonator.com/api/ticker/';
+        this.BASE_URL = 'https://cors.io/?https://api.cryptonator.com/api/full/';
         this.chartRef = null;
         this.state = {
             btcusd: '-',
@@ -25,7 +25,7 @@ class Body extends React.Component{
                     "caption": "Bitcoin Ticker",
                     "subCaption": "",
                     "xAxisName": "Local Time",
-                    "yAxisName": "BRL",
+                    "yAxisName": "usd",
                     "numberPrefix": "R$",
                     "refreshinterval": "2",
                     "slantLabels": "1",
@@ -57,14 +57,14 @@ class Body extends React.Component{
     }
 
     componentDidMount() {
-        this.getDataFor('btc-brl', 'btcbrl');
-        this.getDataFor('ltc-brl', 'ltcbrl');
-        this.getDataFor('eth-brl', 'ethbrl');
+        this.getDataFor('btc-usd', 'btcusd');
+        this.getDataFor('ltc-usd', 'ltcusd');
+        this.getDataFor('eth-usd', 'ethusd');
     }
 
     startUpdatingData(){
         setInterval(() => {
-            fetch(this.BASE_URL + 'btc-brl')
+            fetch(this.BASE_URL + 'btc-usd')
             .then(res => res.json())
             .then(d => {
                 let x_axis = this.clientDateTime();
@@ -81,7 +81,7 @@ class Body extends React.Component{
         })
         .then(res => res.json())
         .then(d => {
-            if(prop === 'btcbrl'){
+            if(prop === 'btcusd'){
                 const dataSource = this.state.dataSource;
                 dataSource.chart.yAxisMaxValue =  parseInt(d.ticker.price) + 5;
                 dataSource.chart.yAxisMinValue =  parseInt(d.ticker.price) - 5;
@@ -130,9 +130,9 @@ class Body extends React.Component{
         <div className="row mt-5 mt-xs-4">
             <div className="col-12 mb-3">
                  <div className="card-deck custom-card-deck">
-                    <PriceCard header="Bitcoin(BTC)" src={'/bitcoin.png'} alt="fireSpot" label="(Price in brl)"   value={this.state.btcbrl} />
-                    <PriceCard header="Litecoin(LTC)"   src={'/litecoin.png'} alt="fireSpot" label="(Price in brl)"  value={this.state.ltcbrl}/>
-                    <PriceCard header="Ethereum(ETH)" src={'/ethereum.png'} alt="fireSpot" label="(Price in brl)"    value={this.state.ethbrl}/>
+                    <PriceCard header="Bitcoin(BTC)" src={'/bitcoin.png'} alt="fireSpot" label="(Price in usd)"   value={this.state.btcusd} />
+                    <PriceCard header="Litecoin(LTC)"   src={'/litecoin.png'} alt="fireSpot" label="(Price in usd)"  value={this.state.ltcusd}/>
+                    <PriceCard header="Ethereum(ETH)" src={'/ethereum.png'} alt="fireSpot" label="(Price in usd)"    value={this.state.ethusd}/>
                     
                    
         
