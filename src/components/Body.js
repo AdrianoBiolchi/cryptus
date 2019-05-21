@@ -130,9 +130,9 @@ class Body extends React.Component{
         <div className="row mt-5 mt-xs-4">
             <div className="col-12 mb-3">
                  <div className="card-deck custom-card-deck">
-                    <PriceCard header="Bitcoin(BTC)" src={'../../public/bitcoin.png'} alt="fireSpot" label="(Price in USD)"   value={this.state.btcusd} />
-                    <PriceCard header="Litecoin(LTC)"   src={'/litecoin.png'} alt="fireSpot" label="(Price in USD)"  value={this.state.ltcusd}/>
-                    <PriceCard header="Ethereum(ETH)" src={'/ethereum.png'} alt="fireSpot" label="(Price in USD)"    value={this.state.ethusd}/>
+                    <PriceCard header="Bitcoin(BTC)" src="/public/bitcoin.png" alt="fireSpot" label="(Price in USD)"   value={this.state.btcusd} />
+                    <PriceCard header="Litecoin(LTC)"   src="/public/litecoin.png" alt="fireSpot" label="(Price in USD)"  value={this.state.ltcusd}/>
+                    <PriceCard header="Ethereum(ETH)" src="/public/ethereum.png" alt="fireSpot" label="(Price in USD)"    value={this.state.ethusd}/>
                     
                    
         
