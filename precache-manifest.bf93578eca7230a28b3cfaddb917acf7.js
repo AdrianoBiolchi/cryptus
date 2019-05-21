@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed0c3e2377066756dc3f9f9612aa165d",
+    "revision": "b53a5f8873ca3834d78da9edd4bff9f1",
     "url": "/cryptus/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cryptus/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "8a8a019bfa255df4f8f5",
+    "revision": "610f7486ae3b8e460b56",
     "url": "/cryptus/static/css/main.e812c5ae.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cryptus/static/js/2.ff28d976.chunk.js"
   },
   {
-    "revision": "8a8a019bfa255df4f8f5",
-    "url": "/cryptus/static/js/main.389946ca.chunk.js"
+    "revision": "610f7486ae3b8e460b56",
+    "url": "/cryptus/static/js/main.c4cbe400.chunk.js"
   },
   {
     "revision": "5bc8bd64eeb18b47397f",
